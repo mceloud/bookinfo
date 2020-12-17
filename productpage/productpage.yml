@@ -1,0 +1,62 @@
+##################################################################################################
+# Productpage services
+##################################################################################################
+apiVersion: v1
+kind: Service
+metadata:
+  name: productpage
+  namespace: ns1
+  labels:
+    app: productpage
+  annotations:
+    ves.io/serviceIsolation: "true"
+spec:
+  type: ClusterIP
+  ports:
+  - port: 9080
+    name: http
+  selector:
+    app: productpage
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: productpage-v1
+  namespace: ns1
+  labels:
+    app: productpage
+  annotations:
+    ves.io/workload-flavor: medium
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: productpage
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: productpage
+        version: v1
+    spec:
+      containers:
+      - name: productpage
+        image: gcr.io/devtest-293809/examples-bookinfo-productpage-v1:1.8.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9080 
+        env:
+        - name: SERVICES_DOMAIN
+          value: ns2
+        # Liveness  
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 9080
+            scheme: HTTP
+          initialDelaySeconds: 5
+          timeoutSeconds: 1
+          periodSeconds: 5
+          successThreshold: 1
+          failureThreshold: 3
+---
