@@ -1,0 +1,16 @@
+metadata:
+  labels:
+    app: productpage
+  name: productpage-http
+  namespace: ns1
+  uid: b95c81c8-33c4-4d24-8ede-966d7248efe1
+spec:
+  gcSpec:
+    address: 10.3.82.61
+    port: 9080
+    protocol: TCP
+    where:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network.Object
+          uid: 9269494c-0bff-4203-a8cb-1fbdbaa83a6e

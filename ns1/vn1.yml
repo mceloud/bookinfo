@@ -1,0 +1,26 @@
+metadata:
+  name: ns1
+  namespace: ns1
+  uid: 13fa2520-8760-4de1-aaba-bc214d8a0e38
+spec:
+  gcSpec:
+    subnets:
+    - ipv4:
+        plen: 16
+        prefix: 10.1.0.0
+  verSpec:
+    VK8S:
+      namespace: ns1
+    subnets:
+    - defaultGw:
+        ipv4:
+          addr: 10.1.0.1
+      subnets:
+        ipv4:
+          plen: 16
+          prefix: 10.1.0.0
+    vnId: 513
+    vnType: 520
+    vrfs:
+    - kind: ves.io.vega.cfg.vrf.Object
+      uid: 43e11ef1-c633-401f-ba0b-9b1b6f04d343

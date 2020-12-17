@@ -1,0 +1,11 @@
+metadata:
+  name: productpage-http
+  namespace: ns1
+  uid: 3dbd2833-25d9-440e-80fa-b1ef8b8e5ea4
+spec:
+  gcSpec:
+    endpoints:
+    - kind: endpoint.Object
+      uid: 2c5289be-af43-4347-8a46-ff317828c7d1
+    http2Options: {}
+

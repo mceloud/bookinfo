@@ -1,0 +1,25 @@
+metadata:
+  labels:
+    app: productpage
+  name: productpage-http
+  namespace: ns1
+  uid: d2d2b139-b1ac-4ac4-b27e-44c3dc6bd677
+spec:
+  gcSpec:
+    domains:
+    - productpage.ns1.svc.cluster.local
+    - productpage.ns1.svc
+    - productpage.ns1
+    - productpage
+    - productpage.ns1.svc.cluster.local:9080
+    - productpage.ns1.svc:9080
+    - productpage.ns1:9080
+    - productpage:9080
+    proxy: TCP_PROXY
+    routes:
+    - kind: route.Object
+      uid: b7a43db5-66b0-4d58-847a-38a2f206f06b
+  verSpec:
+    listener:
+    - kind: ves.io.vega.cfg.adc.listener.Object
+      uid: 4e3257ce-e82d-4c74-8b5e-85ef4af8ee53

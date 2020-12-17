@@ -1,0 +1,9 @@
+metadata:
+  name: ns1
+  namespace: ns1
+  uid: 43e11ef1-c633-401f-ba0b-9b1b6f04d343
+spec:
+  verSpec:
+    site:
+    - kind: ves.io.vega.cfg.site.Object
+      uid: 86aabb62-5865-45aa-8d17-a6435e735362

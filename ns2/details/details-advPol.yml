@@ -1,0 +1,16 @@
+metadata:
+  labels:
+    app: details
+  name: details-http
+  namespace: ns1
+  uid: fa120e58-9152-4091-9c91-5686cc33e5c1
+spec:
+  gcSpec:
+    address: 10.3.82.63
+    port: 9080
+    protocol: TCP
+    where:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network.Object
+          uid: 9269494c-0bff-4203-a8cb-1fbdbaa83a6e

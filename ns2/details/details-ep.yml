@@ -1,0 +1,23 @@
+metadata:
+  name: details-http
+  namespace: ns2
+  uid: 3e5868c6-e865-402a-a836-c856c15bc231
+spec:
+  gcSpec:
+    port: 9080
+    protocol: TCP
+    serviceInfo:
+      discoveryType: K8S
+      serviceName: details.ns2
+    where:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network
+          uid: 13dda5d1-b854-49da-bdee-2cf3a70c340a
+  lcSpec:
+    endpointType: VK8S_SERVICE
+    objectIndex: 26781031
+  verSpec:
+    ainVirtualNetwork:
+    - kind: ves.io.vega.cfg.virtual_network.Object
+      uid: bf02413a-04e5-4bab-ad41-5e3db2c1c555

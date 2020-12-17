@@ -1,0 +1,17 @@
+metadata:
+  labels:
+    app: ratings
+  name: ratings-http
+  namespace: ns1
+  uid: 30739c6e-83c8-436e-a1ae-792a96bb0484
+spec:
+  verSpec:
+    advertisePolicy:
+    - kind: ves.io.vega.cfg.adc.advertise_policy.Object
+      uid: f186d738-3b1d-497f-970a-bb74be0760a5
+    vipClassifier:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network.Object
+          uid: 9269494c-0bff-4203-a8cb-1fbdbaa83a6e
+    virtualK8sServiceName: ratings.ns1

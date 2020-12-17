@@ -1,0 +1,23 @@
+metadata:
+  name: productpage-http
+  namespace: ns1
+  uid: 2c5289be-af43-4347-8a46-ff317828c7d1
+spec:
+  gcSpec:
+    port: 9080
+    protocol: TCP
+    serviceInfo:
+      discoveryType: K8S
+      serviceName: productpage.ns1
+    where:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network
+          uid: 13fa2520-8760-4de1-aaba-bc214d8a0e38
+  lcSpec:
+    endpointType: VK8S_SERVICE
+    objectIndex: 26781029
+  verSpec:
+    ainVirtualNetwork:
+    - kind: ves.io.vega.cfg.virtual_network.Object
+      uid: bf02413a-04e5-4bab-ad41-5e3db2c1c555

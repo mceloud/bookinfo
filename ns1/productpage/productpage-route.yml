@@ -1,0 +1,15 @@
+metadata:
+  name: productpage-http
+  namespace: ns1
+  uid: b7a43db5-66b0-4d58-847a-38a2f206f06b
+spec:
+  gcSpec:
+    routes:
+    - match:
+      - path:
+          regex: (.*?)
+      routeDestination:
+        destinations:
+        - cluster:
+          - kind: cluster.Object
+            uid: 3dbd2833-25d9-440e-80fa-b1ef8b8e5ea4

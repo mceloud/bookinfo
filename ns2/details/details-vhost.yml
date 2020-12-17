@@ -1,0 +1,25 @@
+metadata:
+  labels:
+    app: details
+  name: details-http
+  namespace: ns2
+  uid: cb9d94f3-c18f-4074-99c7-d7a22d4f8ad5
+spec:
+  gcSpec:
+    domains:
+    - details.ns2.svc.cluster.local
+    - details.ns2.svc
+    - details.ns2
+    - details
+    - details.ns2.svc.cluster.local:9080
+    - details.ns2.svc:9080
+    - details.ns2:9080
+    - details:9080
+    proxy: TCP_PROXY
+    routes:
+    - kind: route.Object
+      uid: 613970ee-cab6-4015-82e3-16364e025ea7
+  verSpec:
+    listener:
+    - kind: ves.io.vega.cfg.adc.listener.Object
+      uid: a0b15f16-518a-43cb-b40a-b9e7ce37d1db

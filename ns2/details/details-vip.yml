@@ -1,0 +1,17 @@
+metadata:
+  labels:
+    app: details
+  name: details-http
+  namespace: ns2
+  uid: f4c16487-e5f9-4717-b45d-1f271c0559b6
+spec:
+  verSpec:
+    advertisePolicy:
+    - kind: ves.io.vega.cfg.adc.advertise_policy.Object
+      uid: fa120e58-9152-4091-9c91-5686cc33e5c1
+    vipClassifier:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network.Object
+          uid: 9269494c-0bff-4203-a8cb-1fbdbaa83a6e
+    virtualK8sServiceName: details.ns2

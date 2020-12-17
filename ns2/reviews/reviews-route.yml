@@ -1,0 +1,16 @@
+
+metadata:
+  name: reviews-http
+  namespace: ns2
+  uid: 60c4dd02-a326-49b0-98ef-6f91fb168b4e
+spec:
+  gcSpec:
+    routes:
+    - match:
+      - path:
+          regex: (.*?)
+      routeDestination:
+        destinations:
+        - cluster:
+          - kind: cluster.Object
+            uid: 23a6d16f-0fd9-40d8-9c6c-e50dfba38924

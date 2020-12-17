@@ -1,0 +1,16 @@
+
+metadata:
+  name: details-http
+  namespace: ns2
+  uid: 613970ee-cab6-4015-82e3-16364e025ea7
+spec:
+  gcSpec:
+    routes:
+    - match:
+      - path:
+          regex: (.*?)
+      routeDestination:
+        destinations:
+        - cluster:
+          - kind: cluster.Object
+            uid: 1514ece8-107b-4547-ac6d-c35be188253c

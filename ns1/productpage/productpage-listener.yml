@@ -1,0 +1,15 @@
+metadata:
+  name: productpage-http
+  namespace: ns1
+  uid: 4e3257ce-e82d-4c74-8b5e-85ef4af8ee53
+spec:
+  verSpec:
+    advertisePolicy:
+    - kind: ves.io.vega.cfg.adc.advertise_policy.Object
+      uid: b95c81c8-33c4-4d24-8ede-966d7248efe1
+    port: 9080
+    protocol: TCP
+    vip:
+    - kind: ves.io.vega.cfg.adc.virtual_ip.Object
+      uid: 6241993a-67a9-4e3c-b96c-14073003c4a8
+

@@ -1,0 +1,15 @@
+metadata:
+  name: details-http
+  namespace: ns2
+  uid: a0b15f16-518a-43cb-b40a-b9e7ce37d1db
+spec:
+  verSpec:
+    advertisePolicy:
+    - kind: ves.io.vega.cfg.adc.advertise_policy.Object
+      uid: fa120e58-9152-4091-9c91-5686cc33e5c1
+    port: 9080
+    protocol: TCP
+    vip:
+    - kind: ves.io.vega.cfg.adc.virtual_ip.Object
+      uid: f4c16487-e5f9-4717-b45d-1f271c0559b6
+

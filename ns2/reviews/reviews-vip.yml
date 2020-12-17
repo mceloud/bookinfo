@@ -1,0 +1,17 @@
+metadata:
+  labels:
+    app: reviews
+  name: reviews-http
+  namespace: ns2
+  uid: b84f7214-718c-42e5-a3a0-cf56f4966911
+spec:
+  verSpec:
+    advertisePolicy:
+    - kind: ves.io.vega.cfg.adc.advertise_policy.Object
+      uid: 9de546ed-d769-4457-a80e-438888905732
+    vipClassifier:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network.Object
+          uid: 9269494c-0bff-4203-a8cb-1fbdbaa83a6e
+    virtualK8sServiceName: reviews.ns2

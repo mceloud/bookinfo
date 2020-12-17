@@ -1,0 +1,17 @@
+metadata:
+  labels:
+    app: productpage
+  name: productpage-http
+  namespace: ns1
+  uid: 6241993a-67a9-4e3c-b96c-14073003c4a8
+spec:
+  verSpec:
+    advertisePolicy:
+    - kind: ves.io.vega.cfg.adc.advertise_policy.Object
+      uid: b95c81c8-33c4-4d24-8ede-966d7248efe1
+    vipClassifier:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network.Object
+          uid: 9269494c-0bff-4203-a8cb-1fbdbaa83a6e
+    virtualK8sServiceName: productpage.ns1

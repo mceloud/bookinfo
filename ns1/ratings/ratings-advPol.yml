@@ -1,0 +1,16 @@
+metadata:
+  labels:
+    app: ratings
+  name: ratings-http
+  namespace: ns1
+  uid: f186d738-3b1d-497f-970a-bb74be0760a5
+spec:
+  gcSpec:
+    address: 10.3.82.62
+    port: 9080
+    protocol: TCP
+    where:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network.Object
+          uid: 9269494c-0bff-4203-a8cb-1fbdbaa83a6e

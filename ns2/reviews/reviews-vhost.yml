@@ -1,0 +1,26 @@
+metadata:
+  labels:
+    app: reviews
+  name: reviews-http
+  namespace: ns2
+  uid: cb665df6-e926-496a-97ce-29ea454e767b
+spec:
+  gcSpec:
+    domains:
+    - reviews.ns2.svc.cluster.local
+    - reviews.ns2.svc
+    - reviews.ns2
+    - reviews
+    - reviews.ns2.svc.cluster.local:9080
+    - reviews.ns2.svc:9080
+    - reviews.ns2:9080
+    - reviews:9080
+    proxy: TCP_PROXY
+    routes:
+    - kind: route.Object
+      uid: 60c4dd02-a326-49b0-98ef-6f91fb168b4e
+  verSpec:
+    listener:
+    - kind: ves.io.vega.cfg.adc.listener.Object
+      uid: a5e65749-06f5-45cf-9e14-16c96f3a3a7b
+

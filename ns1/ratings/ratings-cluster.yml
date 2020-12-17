@@ -1,0 +1,12 @@
+
+metadata:
+  name: ratings-http
+  namespace: ns1
+  uid: 1f11f2a6-345b-48a8-8e3b-ebf7e8a4833b
+spec:
+  gcSpec:
+    endpoints:
+    - kind: endpoint.Object
+      uid: ed7246b6-3edf-4099-92d9-e0dccb2f470c
+    http2Options: {}
+

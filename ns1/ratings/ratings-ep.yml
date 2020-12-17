@@ -1,0 +1,23 @@
+metadata:
+  name: ratings-http
+  namespace: ns1
+  uid: ed7246b6-3edf-4099-92d9-e0dccb2f470c
+spec:
+  gcSpec:
+    port: 9080
+    protocol: TCP
+    serviceInfo:
+      discoveryType: K8S
+      serviceName: ratings.ns1
+    where:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network
+          uid: 13fa2520-8760-4de1-aaba-bc214d8a0e38
+  lcSpec:
+    endpointType: VK8S_SERVICE
+    objectIndex: 26781030
+  verSpec:
+    ainVirtualNetwork:
+    - kind: ves.io.vega.cfg.virtual_network.Object
+      uid: bf02413a-04e5-4bab-ad41-5e3db2c1c555

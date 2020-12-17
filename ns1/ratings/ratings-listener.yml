@@ -1,0 +1,15 @@
+metadata:
+  name: ratings-http
+  namespace: ns1
+  uid: 136e7ade-1805-479c-92a3-1db1c2c854e2
+spec:
+  verSpec:
+    advertisePolicy:
+    - kind: ves.io.vega.cfg.adc.advertise_policy.Object
+      uid: f186d738-3b1d-497f-970a-bb74be0760a5
+    port: 9080
+    protocol: TCP
+    vip:
+    - kind: ves.io.vega.cfg.adc.virtual_ip.Object
+      uid: 30739c6e-83c8-436e-a1ae-792a96bb0484
+

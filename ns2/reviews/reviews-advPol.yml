@@ -1,0 +1,16 @@
+metadata:
+  labels:
+    app: reviews
+  name: reviews-http
+  namespace: ns1
+  uid: 9de546ed-d769-4457-a80e-438888905732
+spec:
+  gcSpec:
+    address: 10.3.82.64
+    port: 9080
+    protocol: TCP
+    where:
+      virtualNetwork:
+        ref:
+        - kind: virtual_network.Object
+          uid: 9269494c-0bff-4203-a8cb-1fbdbaa83a6e

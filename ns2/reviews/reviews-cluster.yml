@@ -1,0 +1,11 @@
+metadata:
+  name: reviews-http
+  namespace: ns2
+  uid: 23a6d16f-0fd9-40d8-9c6c-e50dfba38924
+spec:
+  gcSpec:
+    endpoints:
+    - kind: endpoint.Object
+      uid: a97cddac-6b02-4bef-9d6a-751139068f1e
+    http2Options: {}
+

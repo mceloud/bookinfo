@@ -1,0 +1,15 @@
+metadata:
+  name: reviews-http
+  namespace: ns2
+  uid: a5e65749-06f5-45cf-9e14-16c96f3a3a7b
+spec:
+  verSpec:
+    advertisePolicy:
+    - kind: ves.io.vega.cfg.adc.advertise_policy.Object
+      uid: 9de546ed-d769-4457-a80e-438888905732
+    port: 9080
+    protocol: TCP
+    vip:
+    - kind: ves.io.vega.cfg.adc.virtual_ip.Object
+      uid: b84f7214-718c-42e5-a3a0-cf56f4966911
+

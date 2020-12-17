@@ -1,0 +1,25 @@
+metadata:
+  labels:
+    app: ratings
+  name: ratings-http
+  namespace: ns1
+  uid: 6145f621-72f0-4496-aafa-1e5f83b6f7eb
+spec:
+  gcSpec:
+    domains:
+    - ratings.ns1.svc.cluster.local
+    - ratings.ns1.svc
+    - ratings.ns1
+    - ratings
+    - ratings.ns1.svc.cluster.local:9080
+    - ratings.ns1.svc:9080
+    - ratings.ns1:9080
+    - ratings:9080
+    proxy: TCP_PROXY
+    routes:
+    - kind: route.Object
+      uid: b313fda6-3348-431e-8970-7095ad28fb5d
+  verSpec:
+    listener:
+    - kind: ves.io.vega.cfg.adc.listener.Object
+      uid: 136e7ade-1805-479c-92a3-1db1c2c854e2
