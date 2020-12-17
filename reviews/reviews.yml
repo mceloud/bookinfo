@@ -1,0 +1,80 @@
+##################################################################################################
+# Reviews service
+##################################################################################################
+apiVersion: v1
+kind: Service
+metadata:
+  name: reviews
+  namespace: ns2
+  labels:
+    app: reviews
+spec:
+  type: ClusterIP
+  clusterIP: 10.3.82.64
+  ports:
+  - port: 9080
+    name: http
+  selector:
+    app: reviews
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reviews-v2
+  namespace: ns2
+  labels:
+    app: reviews
+  annotations:
+    ves.io/workload-flavor: large
+spec:
+  selector:
+    matchLabels:
+      app: reviews
+      version: v2
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: reviews
+        version: v2
+    spec:
+      containers:
+      - name: reviews
+        image: gcr.io/devtest-293809/ruiwang-examples-bookinfo-reviews-v2:1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9080
+        env:
+        - name: SERVICES_DOMAIN
+          value: ns1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: reviews-v3
+  namespace: ns2
+  labels:
+    app: reviews
+  annotations:
+    ves.io/workload-flavor: large
+spec:
+  selector:
+    matchLabels:
+      app: reviews
+      version: v3
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: reviews
+        version: v3
+    spec:
+      containers:
+      - name: reviews
+        image: gcr.io/devtest-293809/ruiwang-examples-bookinfo-reviews-v3:1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 9080
+        env:
+        - name: SERVICES_DOMAIN
+          value: ns1
